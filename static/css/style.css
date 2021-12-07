@@ -2,12 +2,14 @@
   border: 2px solid;
   width: 50%;
   margin: 0 auto;
+  color: #F08080;
 }
 
 header,
 footer,
 main {
   padding: 20px;
+  color: #DAF7A6;
 }
 
 header,
@@ -25,3 +27,8 @@ footer {
 }
 
 .color-1 {color: #F08080;}
+.color-2 {color: #DAF7A6;}
+.color-3 {color: #FFC300;}
+.color-4 {color: #FF5733;}
+.color-5 {color: #C70039;}
+.color-6 {color: #900C3F;}
