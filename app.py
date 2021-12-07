@@ -65,12 +65,14 @@ def create_post():
     """
     name = request.form['fname']
     message = request.form['fmessage']
+    rating = request.form['frating']
 
 
     # create a new document with the data the user entered
     doc = {
         "name": name,
         "message": message, 
+        "rating": rating,
         "created_at": datetime.datetime.utcnow()
     }
     db.exampleapp.insert_one(doc) # insert a new document
@@ -96,11 +98,13 @@ def edit_post(mongoid):
     """
     name = request.form['fname']
     message = request.form['fmessage']
+    rating = request.form['frating']
 
     doc = {
         # "_id": ObjectId(mongoid), 
         "name": name, 
         "message": message, 
+        "rating": rating,
         "created_at": datetime.datetime.utcnow()
     }
 
