@@ -2,17 +2,22 @@
 
 {% block container %}
 <h2>Read Feeds</h2>
-<p>**User Reviews**
+<p>Proto Reviews
         
     {% for doc in docs %}
     <div>
         <hr class="solid">
         <p class="post">
-            Posted by {{doc.name}} at {{ doc.created_at.strftime("%H:%M on %d %B %Y") }}
+            Posted by at {{ doc.created_at.strftime("%H:%M on %d %B %Y") }}
             </br>
-            <a href="{{ url_for('edit',mongoid=doc._id)}}">Edit</a> | <a href="{{ url_for('delete',mongoid=doc._id)}}">Delete</a>
+            <a href="{{ url_for('edit',mongoid=doc._id)}}">Edit</a> | <a href="{{ url_for('delete',mongoid=doc._id)}}">Delete</a> | <a href="{{ url_for('comment',mongoid=doc._id)}}">Comment</a>
             </br>
         </p>
+
+        <p>
+            {{ doc.name }}
+        </p>
+
         <p>
             {{ doc.message }}
         </p>

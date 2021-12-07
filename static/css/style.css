@@ -2,14 +2,14 @@
   border: 2px solid;
   width: 50%;
   margin: 0 auto;
-  color: #F08080;
 }
+
+body {background-color: #F08080;}
 
 header,
 footer,
 main {
   padding: 20px;
-  color: #DAF7A6;
 }
 
 header,
