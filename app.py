@@ -49,7 +49,7 @@ def read():
 
 @app.route('/getone')
 def getone():
-    sample = db.exampleapp.find({}).limit(1)
+    sample = db.exampleapp.aggregate([{'$sample': {'size': 1 }}])
     return render_template('getone.html', sample = sample) 
 
 
