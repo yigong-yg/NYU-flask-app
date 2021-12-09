@@ -56,6 +56,14 @@ def create():
     """
     return render_template('create.html') # render the create template
 
+@app.route('/other')
+def other():
+    """
+    Route for GET requests to the create page.
+    Displays a form users can fill out to create a new document.
+    """
+    return render_template('other.html') # render the create template
+
 
 @app.route('/create', methods=['POST'])
 def create_post():
