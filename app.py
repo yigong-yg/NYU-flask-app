@@ -53,8 +53,8 @@ def getone():
     Route for GET requests to the read page.
     Displays some information for the user with links to other pages.
     """
-    doc = db.exampleapp.find_one({})
-    return render_template('getone.html', doc=doc) 
+    sample = db.exampleapp.find_one({})
+    return render_template('getone.html', sample = sample) 
 
 
 @app.route('/create')
