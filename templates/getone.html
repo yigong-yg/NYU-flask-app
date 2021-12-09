@@ -4,21 +4,22 @@
 <h2>Random Challenge!</h2>
 <p>
         
-    {% for sample in sample %}
+    {% for doc in sample %}
     <div>
         <hr class="solid">
         <p class="post">
+            Posted at {{ doc.created_at.strftime("%H:%M on %d %B %Y") }}
         </p>
             
         <p>
-            <b>I visited: </b> {{ sample.name }}
+            <b>I visited: </b> {{ doc.name }}
         </p>
 
         <p>
-            {{ sample.message }}
+            {{ doc.message }}
         </p>
         <p>
-            <b>Rating: </b> {{ sample.rating }}
+            <b>Rating: </b> {{ doc.rating }}
         </p>  
     </div>
     {%endfor%}
