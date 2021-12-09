@@ -49,7 +49,7 @@ def read():
 
 @app.route('/getone')
 def getone():
-    sample = db.exampleapp.findOne({})
+    sample = db.exampleapp.find_one({})
     return render_template('getone.html', sample = sample) 
 
 
