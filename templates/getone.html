@@ -6,10 +6,11 @@
         
     {% sample %}
     <div>
-        
+        <hr class="solid">
         <p class="post">
+            Posted at {{ doc.created_at.strftime("%H:%M on %d %B %Y") }}
         </p>
-
+            
         <p>
             <b>I visited: </b> {{ sample.name }}
         </p>
