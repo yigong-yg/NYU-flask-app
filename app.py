@@ -47,14 +47,14 @@ def read():
     docs = db.exampleapp.find({}).sort("created_at", -1) # sort in descending order of created_at timestamp
     return render_template('read.html', docs=docs) # render the read template
 
-@app.route('/read')
+@app.route('/getone')
 def getone():
     """
     Route for GET requests to the read page.
     Displays some information for the user with links to other pages.
     """
     doc = db.exampleapp.find_one({})
-    return render_template('read.html', doc=doc) 
+    return render_template('getone.html', doc=doc) 
 
 
 @app.route('/create')

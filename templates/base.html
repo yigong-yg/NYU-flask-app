@@ -25,7 +25,8 @@
         <p>
           <a href="{{ url_for('home')}}">Home</a> |
           <a href="{{ url_for('read')}}">All Reviews</a> |
-          <a href="{{ url_for('create')}}">Create Your Own Review</a>
+          <a href="{{ url_for('create')}}">Create Your Own Review</a> |
+          <a href="{{ url_for('getone')}}">Get a Random Review !</a>
         </p>
       </header>
       <main>{% block container %} {% endblock %}</main>
