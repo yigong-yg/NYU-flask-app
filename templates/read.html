@@ -8,21 +8,21 @@
     <div>
         <hr class="solid">
         <p class="post">
-            Posted by at {{ doc.created_at.strftime("%H:%M on %d %B %Y") }}
+            Posted at {{ doc.created_at.strftime("%H:%M on %d %B %Y") }}
             </br>
             <a href="{{ url_for('edit',mongoid=doc._id)}}">Edit</a> | <a href="{{ url_for('delete',mongoid=doc._id)}}">Delete</a>
             </br>
         </p>
 
         <p>
-            {{ doc.name }}
+            <b>I visited: </b> {{ doc.name }}
         </p>
 
         <p>
             {{ doc.message }}
         </p>
         <p>
-            Rating: {{ doc.rating }}
+            <b>Rating: </b> {{ doc.rating }}
         </p>  
     </div>
     {%endfor%}
