@@ -49,10 +49,6 @@ def read():
 
 @app.route('/getone')
 def getone():
-    """
-    Route for GET requests to the read page.
-    Displays some information for the user with links to other pages.
-    """
     sample = db.exampleapp.find_one({})
     return render_template('getone.html', sample = sample) 
 
@@ -67,11 +63,7 @@ def create():
 
 @app.route('/other')
 def other():
-    """
-    Route for GET requests to the create page.
-    Displays a form users can fill out to create a new document.
-    """
-    return render_template('other.html') # render the create template
+    return render_template('other.html') 
 
 
 @app.route('/create', methods=['POST'])
